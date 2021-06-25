@@ -93,6 +93,12 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+h1 {
+  font-family: "PT Serif", serif;
+  font-size: 3rem;
+  margin: -10px 0 1em 0;
+}
+
 .header-logo {
   padding: 100px 0;
   text-align: center;
@@ -113,6 +119,22 @@ a:hover, a:focus {
   color: #ffffff;
   font-size: 1.15rem;
   letter-spacing: 0.2em;
+}
+
+.new-films-row {
+  margin-left: -7.5px;
+  margin-right: -7.5px;
+  margin-bottom: -15px;
+}
+
+.new-films-item {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  margin-bottom: 15px;
+}
+
+.new-films-item__thumbnail {
+  margin-bottom: 0;
 }
 
 .vertical-slider {
