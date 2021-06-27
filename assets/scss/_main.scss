@@ -2,7 +2,8 @@
   @extend %margin-bottom;
 }
 
-.new-films {
+.new-films,
+.week-films {
   &-row {
     margin-left: -$gap / 2;
     margin-right: -$gap / 2;
@@ -18,5 +19,4 @@
       margin-bottom: 0;
     }
   }
-
 }

@@ -99,6 +99,44 @@ h1 {
   margin: -10px 0 1em 0;
 }
 
+h1::after {
+  position: absolute;
+  content: "";
+  border-bottom: 3px solid rgba(240, 173, 19, 0.7);
+  width: 100%;
+  margin: 40px 0 0 15px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: "PT Serif", serif;
+  margin: 60px 0 45px 45px;
+}
+
+h2::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  border-top: 3px solid rgba(240, 173, 19, 0.7);
+  width: 30px;
+  margin-top: 10px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid rgba(240, 173, 19, 0.7);
+  width: 100%;
+  margin: 34px 0 0 15px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
 .header-logo {
   padding: 100px 0;
   text-align: center;
@@ -121,19 +159,22 @@ h1 {
   letter-spacing: 0.2em;
 }
 
-.new-films-row {
+.new-films-row,
+.week-films-row {
   margin-left: -7.5px;
   margin-right: -7.5px;
   margin-bottom: -15px;
 }
 
-.new-films-item {
+.new-films-item,
+.week-films-item {
   padding-left: 7.5px;
   padding-right: 7.5px;
   margin-bottom: 15px;
 }
 
-.new-films-item__thumbnail {
+.new-films-item__thumbnail,
+.week-films-item__thumbnail {
   margin-bottom: 0;
 }
 
@@ -275,6 +316,65 @@ h1 {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.new-films,
+.week-films {
+  position: relative;
+  overflow: hidden;
+}
+
+.new-films h3,
+.week-films h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.new-films-item__thumbnail:hover,
+.week-films-item__thumbnail:hover {
+  background-color: #df8a13;
+}
+
+.new-films-item__thumbnail:hover h3,
+.week-films-item__thumbnail:hover h3 {
+  color: #ffffff;
+}
+
+.cinema-news {
+  position: relative;
+  overflow: hidden;
+}
+
+.cinema-news-item:hover h3 a {
+  color: #df8a13;
+}
+
+.cinema-news-item:hover .cinema-news-item__thumbnail {
+  background-color: #f0ad13;
+}
+
+.cinema-news-item:hover .cinema-news-item__button {
+  background-color: #df8a13;
+}
+
+.cinema-news-item__thumbnail {
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.cinema-news-item__button {
+  float: right;
+  margin-bottom: 30px;
+}
+
+.cinema-news-item__text {
+  text-align: justify;
 }
 
 @media (min-width: 576px) {
