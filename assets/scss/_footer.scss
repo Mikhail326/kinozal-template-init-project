@@ -1,0 +1,44 @@
+.footer {
+  padding-top: $gap * 3;
+  color: #fbfbfb;
+  background-color: $color-dark;
+
+  &-block {
+    &__title {
+      font-size: 1.125rem;
+    }
+
+    &__item {
+      list-style: none;
+    }
+
+    &__list {
+      padding: 0;
+    }
+
+    &__link {
+      color: darken($color-light, 53.5%);
+
+      &:hover {
+        color: $color-light;
+      }
+    }
+  }
+
+  &-bottom {
+    &-row {
+      margin: $gap / 3 * 4 0;
+      text-align: center;
+    }
+
+    &-link {
+      color: $color-light;
+
+      &:hover {
+        color: $color-light;
+      }
+    }
+  }
+}
+
+

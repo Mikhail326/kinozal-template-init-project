@@ -4,6 +4,9 @@
 
 .new-films,
 .week-films {
+  position: relative;
+  overflow: hidden;
+
   &-row {
     margin-left: -$gap / 2;
     margin-right: -$gap / 2;
@@ -17,6 +20,58 @@
 
     &__thumbnail {
       margin-bottom: 0;
+
+      &:hover {
+        background-color: $color-accent;
+
+        & h3 {
+          color: $color-light;
+        }
+      }
+    }
+
+    & h3 {
+      margin: 0;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: color 0.25s;
+    }
+
+  }
+}
+
+.cinema-news {
+  position: relative;
+  overflow: hidden;
+
+  &-item {
+
+    &:hover h3 a {
+      color: $color-accent;
+    }
+
+    &:hover &__thumbnail {
+      background-color: $color-accent-light;
+    }
+
+    &:hover &__button {
+      background-color: $color-accent;
+    }
+
+    &__thumbnail {
+      margin: 0;
+      transition: background-color 0.5s;
+    }
+
+    &__button {
+      float: right;
+      margin-bottom: $gap * 2;
+      transition: background-color 0.5s;
+    }
+
+    &__text {
+      text-align: justify;
     }
   }
 }
