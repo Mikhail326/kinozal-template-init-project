@@ -137,6 +137,11 @@ h3 {
   transition: color 0.5s;
 }
 
+section {
+  position: relative;
+  overflow: hidden;
+}
+
 .header-logo {
   padding: 100px 0;
   text-align: center;
@@ -157,12 +162,6 @@ h3 {
   color: #ffffff;
   font-size: 1.15rem;
   letter-spacing: 0.2em;
-}
-
-.new-films,
-.week-films {
-  position: relative;
-  overflow: hidden;
 }
 
 .new-films-row,
@@ -205,11 +204,6 @@ h3 {
   transition: color 0.25s;
 }
 
-.cinema-news {
-  position: relative;
-  overflow: hidden;
-}
-
 .cinema-news-item:hover h3 a {
   color: #df8a13;
 }
@@ -239,6 +233,40 @@ h3 {
 
 .cinema-news-item__text {
   text-align: justify;
+}
+
+.film-info__well {
+  border-radius: 0 0 4px 4px;
+}
+
+.film-info__span {
+  font-size: 1.2rem;
+}
+
+.film-info__badge {
+  font-size: 0.96rem;
+}
+
+.film-info__span {
+  margin-right: 15px;
+}
+
+.film-info__span:last-child {
+  margin-right: 0;
+}
+
+.embed-responsive {
+  border: 1px solid #dddddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.film-description__well {
+  background-color: #f1f1f1;
+}
+
+.film-comment__button {
+  float: right;
 }
 
 .vertical-slider {
