@@ -31,9 +31,14 @@
   background-color: darken($color-light, 5.5%);
 }
 
+.film-reviews .panel {
+  margin-bottom: $gap * 2;
+}
+
 .film-comment {
 
   &__button {
     float: right;
   }
 }
+
