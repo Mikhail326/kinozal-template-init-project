@@ -67,6 +67,18 @@
   background-color: darken($color-light, 7%);
   border: none;
 
+  &:first-of-type {
+    @include md {
+      margin-bottom: $gap * 3;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @include md {
+      margin-bottom: $gap * 4;
+    }
+  }
+
   &:not(:last-of-type) {
     margin-bottom: $gap * 2;
   }

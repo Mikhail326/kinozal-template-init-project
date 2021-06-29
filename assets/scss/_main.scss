@@ -16,26 +16,28 @@
     padding-right: $gap / 2;
     margin-bottom: $gap;
 
+    &:hover &__thumbnail {
+      background-color: $color-accent;
+    }
+
+    &:hover &__title {
+      color: $color-light;
+    }
+
     &__thumbnail {
       margin-bottom: 0;
-
-      &:hover {
-        background-color: $color-accent;
-
-        & h3 {
-          color: $color-light;
-        }
-      }
     }
 
-    & h3 {
-      margin: 0;
-      text-align: center;
+    &__title {
+      @include text-shortener;
       font-size: 1rem;
       font-weight: bold;
-      transition: color 0.25s;
+      margin: 0;
+      text-align: center;
     }
-
+    &__image {
+      width: 100%;
+    }
   }
 }
 

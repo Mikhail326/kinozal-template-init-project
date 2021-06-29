@@ -104,7 +104,7 @@ h1::after {
   content: "";
   border-bottom: 3px solid rgba(240, 173, 19, 0.7);
   width: 100%;
-  margin: 40px 0 0 15px;
+  margin: 0.85em 0 0 15px;
 }
 
 h2 {
@@ -119,7 +119,7 @@ h2::before {
   content: "";
   border-top: 3px solid rgba(240, 173, 19, 0.7);
   width: 30px;
-  margin-top: 10px;
+  margin-top: 0.25em;
 }
 
 h2::after {
@@ -127,14 +127,14 @@ h2::after {
   position: absolute;
   border-bottom: 3px solid rgba(240, 173, 19, 0.7);
   width: 100%;
-  margin: 34px 0 0 15px;
+  margin: 0.85em 0 0 15px;
 }
 
 h3 {
   font-size: 1.5rem;
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
 }
 
 section {
@@ -178,30 +178,43 @@ section {
   margin-bottom: 15px;
 }
 
+.new-films-item:hover .new-films-item__thumbnail,
+.week-films-item:hover .new-films-item__thumbnail, .new-films-item:hover
+.week-films-item__thumbnail,
+.week-films-item:hover
+.week-films-item__thumbnail {
+  background-color: #df8a13;
+}
+
+.new-films-item:hover .new-films-item__title,
+.week-films-item:hover .new-films-item__title, .new-films-item:hover
+.week-films-item__title,
+.week-films-item:hover
+.week-films-item__title {
+  color: #ffffff;
+}
+
 .new-films-item__thumbnail,
 .week-films-item__thumbnail {
   margin-bottom: 0;
 }
 
-.new-films-item__thumbnail:hover,
-.week-films-item__thumbnail:hover {
-  background-color: #df8a13;
-}
-
-.new-films-item__thumbnail:hover h3,
-.week-films-item__thumbnail:hover h3 {
-  color: #ffffff;
-}
-
-.new-films-item h3,
-.week-films-item h3 {
-  margin: 0;
-  text-align: center;
+.new-films-item__title,
+.week-films-item__title {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   font-size: 1rem;
   font-weight: bold;
-  -webkit-transition: color 0.25s;
-  -o-transition: color 0.25s;
-  transition: color 0.25s;
+  margin: 0;
+  text-align: center;
+}
+
+.new-films-item__image,
+.week-films-item__image {
+  width: 100%;
 }
 
 .cinema-news-item:hover h3 a {
@@ -240,6 +253,7 @@ section {
 }
 
 .film-info__span {
+  white-space: nowrap;
   font-size: 1.2rem;
 }
 
@@ -472,6 +486,15 @@ section {
   }
 }
 
+@media (max-width: 991.8px) {
+  .panel:first-of-type {
+    margin-bottom: 45px;
+  }
+  .panel:nth-of-type(2) {
+    margin-bottom: 60px;
+  }
+}
+
 @media (max-width: 767.8px) {
   .navbar-inverse .navbar-nav > li > a {
     text-align: center;
@@ -485,6 +508,17 @@ section {
 }
 
 @media (max-width: 575.8px) {
+  h1 {
+    margin: 0 0 30px;
+    font-size: 2rem;
+  }
+  h2 {
+    margin: 45px 0 30px 45px;
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
   .header-logo__title {
     font-size: 2.5rem;
     letter-spacing: 0.2em;
